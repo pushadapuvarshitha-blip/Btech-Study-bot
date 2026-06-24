@@ -1,0 +1,106 @@
+/* Basic styles for the entire page */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e9ebee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* The main container for the chat interface */
+#chat-container {
+  width: 450px;
+  height: 600px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  /* Use Flexbox to stack the log and form vertically */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* The area where messages are displayed */
+#chat-log {
+  flex-grow: 1; /* Allows the log to fill available space */
+  padding: 20px;
+  /* Makes the chat log scrollable when content overflows */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds space between message bubbles */
+}
+
+/* Base style for all message bubbles */
+.message {
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 75%;
+  line-height: 1.4;
+}
+
+/* Style for messages sent by the user */
+.user-message {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end; /* Aligns the bubble to the right */
+  border-bottom-right-radius: 4px; /* Creates a "tail" effect */
+}
+
+/* Style for messages sent by the bot */
+.bot-message {
+  background-color: #f1f0f0;
+  color: #333;
+  align-self: flex-start; /* Aligns the bubble to the left */
+  border-bottom-left-radius: 4px; /* Creates a "tail" effect */
+}
+
+/* The form at the bottom of the chat */
+#chat-form {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+#user-input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+#chat-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#chat-form button:hover {
+  background-color: #0056b3;
+}
+
